@@ -125,6 +125,27 @@
   color: white;
   border-color: #6d6458;
 }
+  .hero-photos {
+    position: relative;
+  }
+  .hero-photos img {
+    width: 120px;
+    position: absolute;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 0;
+    object-fit: cover;
+  }
+  .photo.left {
+    top: -40px;
+    left: -40px;
+    transform: rotate(-8deg);
+  }
+  .photo.right {
+    bottom: -40px;
+    right: -40px;
+    transform: rotate(7deg);
+  }
 </style>
   <script>
   function switchLang(lang) {
@@ -144,7 +165,9 @@
   </div>
 
   <header>
-    <div class="hero-text">
+    <div class="hero-text hero-photos">
+      <img src="images/Ogi-craft-4.avif" alt="Dekor bal" class="photo left">
+      <img src="images/Ogi-craft-6.avif" alt="Dekor jobb" class="photo right">
       <h1>Ogi's Crafts</h1>
       <p data-lang="hu">Egyedi könyvkötészet – a múlt varázsa modern kezekben</p>
       
@@ -208,7 +231,7 @@
       <a href="https://www.instagram.com/ogiscrafts" aria-label="Instagram">📸</a>
       <a href="https://www.tiktok.com/@ogiscrafts" aria-label="TikTok">🎵</a>
       <a href="https://www.facebook.com/ogiscrafts" aria-label="Facebook">📘</a>
-      <a href="https://uk.pinterest.com/ogiscrafts/" aria-label="Pinterest">📌</a>
+      <a href="https://uk.pinterest.com/ogiscrafts" aria-label="Pinterest">📌</a>
     </div>
   </section>
 
@@ -217,4 +240,5 @@
   </footer>
 </body>
 </html>
+
 
