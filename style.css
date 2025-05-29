@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  font-family: 'Lora', serif;
+  background-color: #f6f1e9;
+  color: #3e3e3e;
+}
+header {
+  background: url('images/hatter.jpg') center/cover;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  color: #5a4b3c;
+  margin-bottom: 1rem;
+}
+nav {
+  background-color: #eae2d6;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+nav a {
+  text-decoration: none;
+  color: #5a4b3c;
+  font-weight: bold;
+}
+section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+section h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #4e3c2d;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.socials {
+  text-align: center;
+  margin-top: 2rem;
+}
+.socials a {
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  color: #7a6a58;
+  text-decoration: none;
+}
+footer {
+  background-color: #d9cfc2;
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #5a4b3c;
+}
