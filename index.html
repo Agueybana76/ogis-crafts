@@ -15,6 +15,21 @@
       background-color: #f6f1e9;
       color: #3e3e3e;
     }
+    .lang-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1000;
+    }
+    .lang-toggle button {
+      margin-left: 0.5rem;
+      padding: 0.25rem 0.75rem;
+      font-weight: bold;
+      background: #e0dcd3;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      cursor: pointer;
+    }
     header {
       display: flex;
       flex-direction: row;
@@ -39,11 +54,12 @@
       color: #7a6a58;
     }
     .hero-video {
-      flex: 1 1 400px;
-      max-width: 500px;
+      flex: 1 1 345px;
+      max-width: 345px;
     }
     .hero-video iframe {
       width: 100%;
+      height: auto;
       aspect-ratio: 9 / 16;
       border: none;
       border-radius: 12px;
@@ -104,16 +120,37 @@
       font-size: 0.9rem;
       color: #5a4b3c;
     }
-  </style>
+  .lang-toggle button.active {
+  background-color: #b1a896;
+  color: white;
+  border-color: #6d6458;
+}
+</style>
+  <script>
+  function switchLang(lang) {
+    const root = document.documentElement;
+    const btns = document.querySelectorAll('.lang-toggle button');
+    btns.forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`.lang-toggle button[data-lang="${lang}"]`).classList.add('active');
+    root.lang = lang;
+  }
+  window.onload = () => switchLang('hu');
+</script>
 </head>
 <body>
+  <div class="lang-toggle">
+    <button onclick="switchLang('hu')" data-lang="hu" class="active">🇭🇺</button>
+    <button onclick="switchLang('en')" data-lang="en">🇬🇧</button>
+  </div>
+
   <header>
     <div class="hero-text">
       <h1>Ogi's Crafts</h1>
-      <p>Egyedi könyvkötészet – a múlt varázsa modern kezekben</p>
+      <p data-lang="hu">Egyedi könyvkötészet – a múlt varázsa modern kezekben</p>
+      
     </div>
     <div class="hero-video">
-      <iframe src="https://assets.pinterest.com/ext/embed.html?id=600738037831283002" height="713" width="345" frameborder="0" scrolling="no"></iframe>
+      <iframe src="https://assets.pinterest.com/ext/embed.html?id=600738037831283002" frameborder="0" scrolling="no"></iframe>
     </div>
   </header>
 
@@ -125,11 +162,23 @@
   </nav>
 
   <section id="rolam">
-    <h2>Rólam</h2>
-    <p>Egész életemben vonzott az alkotás, de nagyjából hét éve kezdtem el tudatosan időt és teret adni a kreatív munkának. Azóta számos technikát kipróbáltam, készítettem egyedi tárgyakat, átalakítottam régi bútorokat, kísérleteztem mindenféle anyaggal és ötlettel – mindig is az hajtott, hogy valami különlegeset hozzak létre a két kezemmel.</p>
-    <p>Három éve teljesen véletlenül találkoztam a könyvkötészettel, és szinte azonnal tudtam: megtaláltam azt, amit igazán kerestem. A könyvkötés számomra nem csupán technika vagy eszköz, hanem egy csendes, mégis mély kifejezőforma. Imádom, hogy minden könyv más, hogy nincs két egyforma darab – és hogy minden egyes munkafolyamatban benne van az idő, az odafigyelés, és valami megfoghatatlan, ami kézről kézre száll.</p>
-    <p>Ma már főként ezzel foglalkozom, ez lett a hivatásommá érő szenvedély. A könyveimet úgy tervezem, mintha valaki majd titkokat súgna beléjük – legyen szó naplóról, ajándékról vagy egy különleges emléktárgyról. Közben persze nem engedtem el a többi kreatív ösvényt sem, csak egy kicsit háttérbe húzódtak. Hiszem, hogy a kézzel készült tárgyakban ott él a figyelem, a történet és az emberi jelenlét.</p>
-    <p>Jelenleg egy kis, kézzel készült naplókból és workshopokból álló vállalkozás építésén dolgozom. Szeretnék olyan teret teremteni, ahol mások is felfedezhetik az alkotás örömét, és ahol a csendes, lassú munka értéke újra láthatóvá válik. A könyvekben, ahogy az életben is, számomra a részletekben van a varázs.</p>
+    <h2 data-lang="hu">Rólam</h2>
+    
+    <p data-lang="hu" style="line-height: 1.8; text-align: justify; padding-right: 1rem;">
+        Egész életemben vonzott az alkotás, de nagyjából hét éve kezdtem el tudatosan időt és teret adni a kreatív munkának. 
+        Azóta számos technikát kipróbáltam, készítettem egyedi tárgyakat, átalakítottam régi bútorokat, kísérleteztem mindenféle anyaggal és ötlettel – mindig is az hajtott, 
+        hogy valami különlegeset hozzak létre a két kezemmel. Három éve teljesen véletlenül találkoztam a könyvkötészettel, és szinte azonnal tudtam: megtaláltam azt, amit igazán kerestem.
+        A könyvkötés számomra nem csupán technika vagy eszköz, hanem egy csendes, mégis mély kifejezőforma. Imádom, hogy minden könyv más, hogy nincs két egyforma darab – 
+        és hogy minden egyes munkafolyamatban benne van az idő, az odafigyelés, és valami megfoghatatlan, ami kézről kézre száll. 
+        Ma már főként ezzel foglalkozom, ez lett a hivatásommá érő szenvedély. 
+        A könyveimet úgy tervezem, mintha valaki majd titkokat súgna beléjük – legyen szó naplóról, ajándékról vagy egy különleges emléktárgyról. 
+        Közben persze nem engedtem el a többi kreatív ösvényt sem, csak egy kicsit háttérbe húzódtak. 
+        Hiszem, hogy a kézzel készült tárgyakban ott él a figyelem, a történet és az emberi jelenlét.
+        Jelenleg egy kis, kézzel készült naplókból és workshopokból álló vállalkozás építésén dolgozom. 
+        Szeretnék olyan teret teremteni, ahol mások is felfedezhetik az alkotás örömét, és ahol a csendes, lassú munka értéke újra láthatóvá válik.
+        A könyvekben, ahogy az életben is, számomra a részletekben van a varázs.
+      </p>
+    
   </section>
 
   <section id="termekek">
@@ -149,17 +198,17 @@
 
   <section id="workshopok">
     <h2>Workshopok</h2>
-    <p>Ogi induló workshopokat is szervez, ahol betekintést nyerhetsz a könyvkötészet világába. A résztvevők ajándék mini üvegcsét is kapnak a végén – például a „Lélek Gyógyszertár” projekt keretében.</p>
+    <p>Ogi induló workshopokat is szervez...</p>
   </section>
 
   <section id="kapcsolat">
     <h2>Kapcsolat</h2>
-    <p>Érdeklődni az alábbi platformokon lehet, illetve hamarosan elérhető egy kapcsolatfelvételi űrlap is.</p>
+    <p>Érdeklődni az alábbi platformokon lehet...</p>
     <div class="socials">
-      <a href="#" aria-label="Instagram">📸</a>
-      <a href="#" aria-label="TikTok">🎵</a>
-      <a href="#" aria-label="Facebook">📘</a>
-      <a href="#" aria-label="Pinterest">📌</a>
+      <a href="https://www.instagram.com/ogiscrafts" aria-label="Instagram">📸</a>
+      <a href="https://www.tiktok.com/@ogiscrafts" aria-label="TikTok">🎵</a>
+      <a href="https://www.facebook.com/ogiscrafts" aria-label="Facebook">📘</a>
+      <a href="https://uk.pinterest.com/ogiscrafts/" aria-label="Pinterest">📌</a>
     </div>
   </section>
 
@@ -168,3 +217,4 @@
   </footer>
 </body>
 </html>
+
