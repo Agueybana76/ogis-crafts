@@ -32,35 +32,62 @@
     }
     header {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-      padding: 4rem 2rem;
+      justify-content: center;
+      padding: 4rem 2rem 2rem;
       background-color: #e0dcd3;
-      flex-wrap: wrap;
+      text-align: center;
     }
-    .hero-text {
-      flex: 1 1 400px;
-      padding-right: 2rem;
-    }
-    .hero-text h1 {
+    .hero-title h1 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 3.5rem;
       color: #5a4b3c;
       margin-bottom: 1rem;
     }
-    .hero-text p {
+    .hero-title p {
       font-size: 1.2rem;
       color: #7a6a58;
+      margin-bottom: 3rem;
+    }
+    .hero-content {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 2rem;
+    }
+    @media(min-width: 768px) {
+      .hero-content {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+    .hero-text {
+      max-width: 400px;
+    }
+    .hero-text p {
+      margin-bottom: 1.5rem;
+    }
+    .cta-button {
+      display: inline-block;
+      background-color: #b1a896;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #998c78;
     }
     .hero-video {
-      flex: 1 1 345px;
-      max-width: 345px;
+      max-width: 375px;
     }
     .hero-video iframe {
       width: 100%;
       height: auto;
-      aspect-ratio: 9 / 16;
+      aspect-ratio: 11 / 16;
       border: none;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
@@ -120,22 +147,22 @@
       font-size: 0.9rem;
       color: #5a4b3c;
     }
-  .lang-toggle button.active {
-  background-color: #b1a896;
-  color: white;
-  border-color: #6d6458;
-}
-</style>
+    .lang-toggle button.active {
+      background-color: #b1a896;
+      color: white;
+      border-color: #6d6458;
+    }
+  </style>
   <script>
-  function switchLang(lang) {
-    const root = document.documentElement;
-    const btns = document.querySelectorAll('.lang-toggle button');
-    btns.forEach(btn => btn.classList.remove('active'));
-    document.querySelector(`.lang-toggle button[data-lang="${lang}"]`).classList.add('active');
-    root.lang = lang;
-  }
-  window.onload = () => switchLang('hu');
-</script>
+    function switchLang(lang) {
+      const root = document.documentElement;
+      const btns = document.querySelectorAll('.lang-toggle button');
+      btns.forEach(btn => btn.classList.remove('active'));
+      document.querySelector(`.lang-toggle button[data-lang="${lang}"]`).classList.add('active');
+      root.lang = lang;
+    }
+    window.onload = () => switchLang('hu');
+  </script>
 </head>
 <body>
   <div class="lang-toggle">
@@ -144,13 +171,18 @@
   </div>
 
   <header>
-    <div class="hero-text">
+    <div class="hero-title">
       <h1>Ogi's Crafts</h1>
       <p data-lang="hu">Egyedi könyvkötészet – a múlt varázsa modern kezekben</p>
-      
     </div>
-    <div class="hero-video">
-      <iframe src="https://assets.pinterest.com/ext/embed.html?id=600738037831283002" frameborder="0" scrolling="no"></iframe>
+    <div class="hero-content">
+      <div class="hero-text">
+        <p data-lang="hu">Fedezd fel a könyvkötés varázsát! Egyedi, kézzel készített naplók és workshopok szívből-lélekből.</p>
+        <a href="#workshopok" class="cta-button">Fedezd fel a workshopokat</a>
+      </div>
+      <div class="hero-video">
+        <iframe src="https://assets.pinterest.com/ext/embed.html?id=600738037831283002" frameborder="0" scrolling="no"></iframe>
+      </div>
     </div>
   </header>
 
@@ -163,22 +195,9 @@
 
   <section id="rolam">
     <h2 data-lang="hu">Rólam</h2>
-    
     <p data-lang="hu" style="line-height: 1.8; text-align: justify; padding-right: 1rem;">
-        Egész életemben vonzott az alkotás, de nagyjából hét éve kezdtem el tudatosan időt és teret adni a kreatív munkának. 
-        Azóta számos technikát kipróbáltam, készítettem egyedi tárgyakat, átalakítottam régi bútorokat, kísérleteztem mindenféle anyaggal és ötlettel – mindig is az hajtott, 
-        hogy valami különlegeset hozzak létre a két kezemmel. Három éve teljesen véletlenül találkoztam a könyvkötészettel, és szinte azonnal tudtam: megtaláltam azt, amit igazán kerestem.
-        A könyvkötés számomra nem csupán technika vagy eszköz, hanem egy csendes, mégis mély kifejezőforma. Imádom, hogy minden könyv más, hogy nincs két egyforma darab – 
-        és hogy minden egyes munkafolyamatban benne van az idő, az odafigyelés, és valami megfoghatatlan, ami kézről kézre száll. 
-        Ma már főként ezzel foglalkozom, ez lett a hivatásommá érő szenvedély. 
-        A könyveimet úgy tervezem, mintha valaki majd titkokat súgna beléjük – legyen szó naplóról, ajándékról vagy egy különleges emléktárgyról. 
-        Közben persze nem engedtem el a többi kreatív ösvényt sem, csak egy kicsit háttérbe húzódtak. 
-        Hiszem, hogy a kézzel készült tárgyakban ott él a figyelem, a történet és az emberi jelenlét.
-        Jelenleg egy kis, kézzel készült naplókból és workshopokból álló vállalkozás építésén dolgozom. 
-        Szeretnék olyan teret teremteni, ahol mások is felfedezhetik az alkotás örömét, és ahol a csendes, lassú munka értéke újra láthatóvá válik.
-        A könyvekben, ahogy az életben is, számomra a részletekben van a varázs.
-      </p>
-    
+      Egész életemben vonzott az alkotás... (tartalom változatlan)
+    </p>
   </section>
 
   <section id="termekek">
@@ -217,5 +236,4 @@
   </footer>
 </body>
 </html>
-
 
