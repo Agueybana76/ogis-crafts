@@ -6,6 +6,9 @@
   <title>Ogi's Crafts</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Lora&display=swap" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       font-family: 'Lora', serif;
@@ -13,19 +16,38 @@
       color: #3e3e3e;
     }
     header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem 2rem;
       background-color: #e0dcd3;
-      padding: 6rem 2rem;
-      text-align: center;
+      flex-wrap: wrap;
     }
-    header h1 {
+    .hero-text {
+      flex: 1 1 400px;
+      padding-right: 2rem;
+    }
+    .hero-text h1 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 3.5rem;
       color: #5a4b3c;
       margin-bottom: 1rem;
     }
-    header p {
+    .hero-text p {
       font-size: 1.2rem;
       color: #7a6a58;
+    }
+    .hero-video {
+      flex: 1 1 400px;
+      max-width: 500px;
+    }
+    .hero-video iframe {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     }
     nav {
       background-color: #eae2d6;
@@ -60,6 +82,10 @@
       width: 100%;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
     }
     .socials {
       text-align: center;
@@ -82,8 +108,13 @@
 </head>
 <body>
   <header>
-    <h1>Ogi's Crafts</h1>
-    <p>Egyedi könyvkötészet – a múlt varázsa modern kezekben</p>
+    <div class="hero-text">
+      <h1>Ogi's Crafts</h1>
+      <p>Egyedi könyvkötészet – a múlt varázsa modern kezekben</p>
+    </div>
+    <div class="hero-video">
+      <iframe src="https://www.pinterest.co.uk/pin/600738037831283002/" title="Ogi video"></iframe>
+    </div>
   </header>
 
   <nav>
