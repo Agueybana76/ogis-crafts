@@ -115,41 +115,19 @@
       margin-bottom: 1rem;
       color: #4e3c2d;
     }
-    .gallery-mask {
-    position: relative;
-    max-height: 900px;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
-  }
-  .gallery-mask.expanded {
-    max-height: none;
-  }
-  .reveal-gallery {
-    display: block;
-    margin: 2rem auto;
-    padding: 0.6rem 1.2rem;
-    font-weight: bold;
-    background-color: #b1a896;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-auto-rows: 10px;
-    gap: 0.5rem;
+    .gallery {
+    column-count: 4;
+    column-gap: 0.5rem;
+    padding: 0;
   }
   .gallery img {
     width: 100%;
-    height: auto;
+    margin-bottom: 0.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    break-inside: avoid;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    break-inside: avoid;
-    object-fit: cover;
   }
   .gallery img:hover {
     transform: scale(1.02);
@@ -238,8 +216,6 @@
     <img src="images/Ogi-craft-9.avif" alt="Ajándék ötlet">
     <img src="images/Ogi-craft-10.avif" alt="Termék részlet">
     <img src="images/Ogi-craft-11.avif" alt="Alkotás részlet">
-  </div>
-    <button class="reveal-gallery" onclick="this.parentElement.classList.add('expanded')">Mutass többet</button>
   </div>
 </section>
 
