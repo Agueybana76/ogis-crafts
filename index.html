@@ -134,15 +134,21 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
     .socials {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .socials a {
-      margin: 0 0.5rem;
-      font-size: 1.5rem;
-      color: #7a6a58;
-      text-decoration: none;
-    }
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  .socials a {
+    margin: 0 0.5rem;
+  }
+  .socials .icon {
+    width: 32px;
+    height: 32px;
+    fill: #5a4b3c;
+    transition: transform 0.2s ease;
+  }
+  .socials .icon:hover {
+    transform: scale(1.2);
+  }
     footer {
       background-color: #d9cfc2;
       padding: 2rem;
@@ -272,15 +278,23 @@
 </section>
 
   <section id="kapcsolat">
-    <h2>Kapcsolat</h2>
-    <p>Érdeklődni az alábbi platformokon lehet...</p>
-    <div class="socials">
-      <a href="https://www.instagram.com/ogiscrafts" aria-label="Instagram">📸</a>
-      <a href="https://www.tiktok.com/@ogiscrafts" aria-label="TikTok">🎵</a>
-      <a href="https://www.facebook.com/ogiscrafts" aria-label="Facebook">📘</a>
-      <a href="https://uk.pinterest.com/ogiscrafts/" aria-label="Pinterest">📌</a>
-    </div>
-  </section>
+  <h2>Kapcsolat</h2>
+  <p>Érdeklődni az alábbi platformokon lehet...</p>
+  <div class="socials">
+    <a href="https://www.instagram.com/ogiscrafts" aria-label="Instagram">
+      <img src="icons/instagram.svg" alt="Instagram" class="icon">
+    </a>
+    <a href="https://www.tiktok.com/@ogiscrafts" aria-label="TikTok">
+      <img src="icons/tiktok.svg" alt="TikTok" class="icon">
+    </a>
+    <a href="https://www.facebook.com/ogiscrafts" aria-label="Facebook">
+      <img src="icons/facebook.svg" alt="Facebook" class="icon">
+    </a>
+    <a href="https://uk.pinterest.com/ogiscrafts/" aria-label="Pinterest">
+      <img src="icons/pinterest.svg" alt="Pinterest" class="icon">
+    </a>
+  </div>
+</section>
 
   <footer>
     © 2025 Ogi's Crafts. Minden jog fenntartva.
