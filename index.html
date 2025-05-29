@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ogi's Crafts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Lora&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lora', serif;
+      background-color: #f6f1e9;
+      color: #3e3e3e;
+    }
+    header {
+      background: url('assets/background-texture.jpg') center/cover;
+      padding: 6rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      color: #5a4b3c;
+      margin-bottom: 1rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #7a6a58;
+    }
+    nav {
+      background-color: #eae2d6;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: #5a4b3c;
+      font-weight: bold;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #4e3c2d;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .socials {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .socials a {
+      margin: 0 0.5rem;
+      font-size: 1.5rem;
+      color: #7a6a58;
+      text-decoration: none;
+    }
+    footer {
+      background-color: #d9cfc2;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #5a4b3c;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ogi's Crafts</h1>
+    <p>Egyedi könyvkötészet – a múlt varázsa modern kezekben</p>
+  </header>
+
+  <nav>
+    <a href="#rolam">Rólam</a>
+    <a href="#termekek">Termékek</a>
+    <a href="#workshopok">Workshopok</a>
+    <a href="#kapcsolat">Kapcsolat</a>
+  </nav>
+
+  <section id="rolam">
+    <h2>Ogi – Az Alkotó</h2>
+    <p>Ogi a kreatív lélek az Ogi’s Crafts mögött. Könyvkötészetet művel földszínek és történelmi hangulat mentén. Minden darab egyedi, szeretettel készül.</p>
+  </section>
+
+  <section id="termekek">
+    <h2>Termékek</h2>
+    <div class="gallery">
+      <img src="assets/product-photos/naplo.jpg" alt="Kézzel készített napló">
+      <img src="assets/product-photos/sketchbook.jpg" alt="Sketchbook">
+      <img src="assets/product-photos/ajandekkonyv.jpg" alt="Ajándékkönyv">
+    </div>
+  </section>
+
+  <section id="workshopok">
+    <h2>Workshopok</h2>
+    <p>Ogi induló workshopokat is szervez, ahol betekintést nyerhetsz a könyvkötészet világába. A résztvevők ajándék mini üvegcsét is kapnak a végén – például a „Lélek Gyógyszertár” projekt keretében.</p>
+  </section>
+
+  <section id="kapcsolat">
+    <h2>Kapcsolat</h2>
+    <p>Érdeklődni az alábbi platformokon lehet, illetve hamarosan elérhető egy kapcsolatfelvételi űrlap is.</p>
+    <div class="socials">
+      <a href="#" aria-label="Instagram">📸</a>
+      <a href="#" aria-label="TikTok">🎵</a>
+      <a href="#" aria-label="Facebook">📘</a>
+      <a href="#" aria-label="Pinterest">📌</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Ogi's Crafts. Minden jog fenntartva.
+  </footer>
+</body>
+</html>
