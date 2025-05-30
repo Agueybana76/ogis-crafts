@@ -137,4 +137,37 @@ body, html {
   .hero-overlay p {
     font-size: 1rem;
   }
+  .about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.about-image img {
+  max-width: 350px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.about-text p {
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+@media(max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    margin: 0 auto;
+  }
+}
+
 }
