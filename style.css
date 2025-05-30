@@ -509,3 +509,18 @@ nav a:hover {
 .work-gallery-grid img:hover {
   transform: scale(1.02);
 }
+
+.cta-box {
+  border: 2px solid #d4af37; /* halvány arany */
+  border-radius: 16px;
+  padding: 2rem;
+  background-color: #fdf9f2;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.cta-box:hover {
+  transform: translateY(-4px);
+}
