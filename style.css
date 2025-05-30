@@ -511,7 +511,7 @@ nav a:hover {
 }
 
 .cta-box {
-  border: 2px solid #d4af37; /* halvány arany */
+  border: 3px solid #d4af37; /* halvány arany */
   border-radius: 16px;
   padding: 2rem;
   background-color: #fdf9f2;
