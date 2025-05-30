@@ -120,15 +120,16 @@ nav a:hover {
 }
 
 .hero-text {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2;
   color: white;
   text-align: center;
   padding: 3rem 1rem;
   background-color: rgba(0, 0, 0, 0.45);
   max-width: 700px;
-  margin: auto;
-  margin-top: 20vh;
   border-radius: 12px;
 }
 
@@ -162,13 +163,10 @@ nav a:hover {
   background-color: var(--cta-hover);
 }
 
-/*
- * Rólam blokkok
- */
 .about-block {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 2rem;
   padding: 4rem 2rem;
   max-width: 1200px;
@@ -180,21 +178,36 @@ nav a:hover {
   flex-direction: row-reverse;
 }
 
+.about-image {
+  flex: 1 1 33%;
+  max-width: 380px;
+}
+
 .about-image img {
-  max-width: 100%;
+  width: 100%;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .about-text {
-  flex: 1;
-  min-width: 280px;
-  max-width: 600px;
+  flex: 1 1 60%;
+  max-width: 720px;
+}
+
+.about-text h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
 }
 
 .about-text p {
   line-height: 1.8;
   margin-bottom: 1.5rem;
+}
+
+.about-text .cta-button {
+  margin-top: 1rem;
 }
 
 /*
