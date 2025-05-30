@@ -1,107 +1,109 @@
+:root {
+  --primary-color: #b1a896;
+  --background-light: #f6f1e9;
+  --text-dark: #3e3e3e;
+  --cta-hover: #998c78;
+}
+
 body, html {
   margin: 0;
   padding: 0;
-  height: 100%;
   font-family: 'Lora', serif;
-  background-color: #f6f1e9;
-  color: #3e3e3e;
+  background-color: var(--background-light);
+  color: var(--text-dark);
 }
 
 .lang-toggle {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  z-index: 1000;
+  z-index: 10;
 }
 
 .lang-toggle button {
   margin-left: 0.5rem;
   padding: 0.25rem 0.75rem;
-  font-weight: bold;
   background: #e0dcd3;
   border: 1px solid #aaa;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .lang-toggle button.active {
-  background-color: #b1a896;
+  background-color: var(--primary-color);
   color: white;
   border-color: #6d6458;
 }
 
 .hero-video-frame {
   position: relative;
-  width: 100%;
   height: 100vh;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .hero-video-frame video {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 0;
 }
 
 .hero-text {
   position: relative;
   z-index: 2;
-  text-align: center;
   color: white;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 2rem;
-  border-radius: 12px;
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: rgba(0, 0, 0, 0.45);
   max-width: 700px;
+  margin: auto;
+  margin-top: 20vh;
+  border-radius: 12px;
 }
 
 .hero-text h1 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 3rem;
-  margin-bottom: 1rem;
   color: #fff4ea;
+  margin-bottom: 1rem;
 }
 
 .hero-text p {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   margin-bottom: 2rem;
   color: #f0e6dd;
 }
 
 .cta-button {
-  display: inline-block;
-  background-color: #b1a896;
+  background-color: var(--primary-color);
   color: white;
   padding: 0.75rem 1.5rem;
-  font-weight: bold;
   border-radius: 6px;
   text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   transition: background-color 0.3s ease;
-  border: 2px solid #6d6458;
 }
 
 .cta-button:hover {
-  background-color: #998c78;
-}
-
-.cta-icon {
-  margin-right: 0.5rem;
+  background-color: var(--cta-hover);
 }
 
 .about-block {
   display: flex;
-  flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
   padding: 4rem 2rem;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
+  flex-wrap: wrap;
 }
 
 .about-block.reverse {
@@ -111,7 +113,13 @@ body, html {
 .about-image img {
   max-width: 100%;
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
 }
 
 .about-text p {
@@ -122,65 +130,115 @@ body, html {
 .about-highlight {
   position: relative;
   text-align: center;
-  margin: 4rem auto;
+  margin: 3rem auto;
 }
 
 .about-highlight img {
   width: 100%;
-  max-width: 800px;
+  max-width: 600px;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 }
 
 .highlight-text {
   position: absolute;
-  bottom: 2rem;
-  right: 2rem;
-  background: rgba(255, 244, 234, 0.9);
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
-  color: #3e3e3e;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  bottom: 1rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgba(0,0,0,0.6);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
 }
 
 .about-cta {
   text-align: center;
   padding: 4rem 2rem;
-  background-color: #f0e6dd;
+  background-color: #ede7dd;
 }
 
 .about-cta h2 {
   font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.workshop-section {
+  background-color: #fff;
+  padding: 4rem 2rem;
+}
+
+.workshop-intro, .workshop-info {
+  max-width: 900px;
+  margin: auto;
   margin-bottom: 2rem;
-  color: #3e3e3e;
-  font-family: 'Cormorant Garamond', serif;
+  text-align: center;
+}
+
+.workshop-details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.workshop-image img {
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.workshop-text {
+  max-width: 500px;
+}
+
+.workshop-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.workshop-text ul {
+  padding-left: 1rem;
+  list-style: square;
+}
+
+.workshop-cta {
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .custom-footer {
   text-align: center;
   padding: 2rem;
+  background-color: #d6cfc4;
   font-size: 0.9rem;
-  color: #666;
-  background-color: #e0dcd3;
+  color: #333;
 }
 
 @media(max-width: 768px) {
+  .hero-text {
+    margin-top: 10vh;
+    padding: 1.5rem;
+  }
+
   .hero-text h1 {
     font-size: 2rem;
   }
+
   .hero-text p {
     font-size: 1rem;
   }
+
   .about-block {
     flex-direction: column;
     text-align: center;
   }
+
   .highlight-text {
-    font-size: 1.5rem;
-    bottom: 1rem;
+    font-size: 1.25rem;
     right: 1rem;
-    padding: 0.75rem 1.5rem;
+    bottom: 0.5rem;
   }
 }
