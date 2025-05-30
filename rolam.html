@@ -6,6 +6,104 @@
   <title>Rólam – Ogi's Crafts</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Lora&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .hero-video-frame video {
+      width: 100%;
+      max-height: 90vh;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .hero.about-hero {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1rem;
+      background-color: #eae4da;
+      color: #3e3e3e;
+    }
+
+    .hero.about-hero .hero-text {
+      max-width: 500px;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    .about-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      padding: 3rem 2rem;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .about-block.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .about-image img {
+      max-width: 450px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-highlight {
+      position: relative;
+      margin: 3rem 0;
+    }
+
+    .about-highlight img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      max-height: 500px;
+      display: block;
+    }
+
+    .highlight-text {
+      position: absolute;
+      bottom: 10%;
+      left: 5%;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 0.75rem 1.5rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+      font-family: 'Cormorant Garamond', serif;
+      border-radius: 8px;
+    }
+
+    .about-cta {
+      text-align: center;
+      padding: 3rem 1rem;
+      background-color: #f4eee7;
+    }
+
+    .about-cta h2 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero.about-hero {
+        flex-direction: column;
+      }
+      .about-block {
+        flex-direction: column;
+        text-align: center;
+      }
+      .highlight-text {
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+        bottom: 5%;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="lang-toggle">
