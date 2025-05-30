@@ -137,7 +137,7 @@ body, html {
   .hero-overlay p {
     font-size: 1rem;
   }
-  .about-container {
+.about-container {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -154,9 +154,20 @@ body, html {
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
 
+.about-text {
+  flex: 1;
+}
+
 .about-text p {
   line-height: 1.8;
   margin-bottom: 1.5rem;
+}
+
+.about-text h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  color: #4e3c2d;
+  margin-bottom: 1rem;
 }
 
 @media(max-width: 768px) {
