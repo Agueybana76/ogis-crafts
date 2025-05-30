@@ -69,13 +69,13 @@
       switchLang('hu');
 
       const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.2 });
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > 0.6) {
+      entry.target.classList.add('animate');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.6 });
 
       document.querySelectorAll('[data-animate]').forEach(el => {
         observer.observe(el);
