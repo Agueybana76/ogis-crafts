@@ -1,118 +1,140 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Lora', serif;
+  background-color: #f6f1e9;
+  color: #3e3e3e;
+}
 
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: 'Lora', serif;
-      background-color: #f6f1e9;
-      color: #3e3e3e;
-    }
+.lang-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
 
-    .hero {
-      position: relative;
-      height: 100vh;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-    }
+.lang-toggle button {
+  margin-left: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  font-weight: bold;
+  background: #e0dcd3;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
-    .video-background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 0;
-    }
+.lang-toggle button.active {
+  background-color: #b1a896;
+  color: white;
+  border-color: #6d6458;
+}
 
-    .hero-overlay {
-      position: relative;
-      z-index: 2;
-      background: rgba(0, 0, 0, 0.4);
-      padding: 2rem;
-      border-radius: 12px;
-      max-width: 700px;
-    }
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
 
-    .hero-overlay h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: #fff4ea;
-    }
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
 
-    .hero-overlay p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      color: #f0e6dd;
-    }
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 700px;
+}
 
-    .cta-button {
-      display: inline-block;
-      background-color: #b1a896;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      font-weight: bold;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
+.hero-overlay h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #fff4ea;
+}
 
-    .cta-button:hover {
-      background-color: #998c78;
-    }
+.hero-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #f0e6dd;
+}
 
-    .floating-images {
-      position: absolute;
-      top: 10%;
-      right: 5%;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
+.cta-button {
+  display: inline-block;
+  background-color: #b1a896;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
 
-    .floating-images img {
-      width: 120px;
-      border-radius: 8px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-      animation: float 6s ease-in-out infinite;
-    }
+.cta-button:hover {
+  background-color: #998c78;
+}
 
-    .floating-images img:nth-child(2) {
-      animation-delay: 2s;
-    }
+.floating-images {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
-    .floating-images img:nth-child(3) {
-      animation-delay: 4s;
-    }
+.floating-images img {
+  width: 120px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  animation: float 6s ease-in-out infinite;
+}
 
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-20px);
-      }
-    }
+.floating-images img:nth-child(2) {
+  animation-delay: 2s;
+}
 
-    @media(max-width: 768px) {
-      .floating-images {
-        display: none;
-      }
-      .hero-overlay {
-        background: rgba(0, 0, 0, 0.5);
-        padding: 1rem;
-        max-width: 90%;
-      }
-      .hero-overlay h1 {
-        font-size: 2rem;
-      }
-      .hero-overlay p {
-        font-size: 1rem;
-      }
-    }
+.floating-images img:nth-child(3) {
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@media(max-width: 768px) {
+  .floating-images {
+    display: none;
+  }
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    max-width: 90%;
+  }
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+}
