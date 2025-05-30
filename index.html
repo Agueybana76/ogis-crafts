@@ -6,68 +6,58 @@
   <title>Ogi's Crafts</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Lora&display=swap" rel="stylesheet">
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
+    body, html {
       margin: 0;
+      padding: 0;
+      height: 100%;
       font-family: 'Lora', serif;
       background-color: #f6f1e9;
       color: #3e3e3e;
     }
-    .lang-toggle {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      z-index: 1000;
-    }
-    .lang-toggle button {
-      margin-left: 0.5rem;
-      padding: 0.25rem 0.75rem;
-      font-weight: bold;
-      background: #e0dcd3;
-      border: 1px solid #aaa;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    header {
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 4rem 2rem 2rem;
-      background-color: #e0dcd3;
       text-align: center;
+      color: white;
     }
-    .hero-title h1 {
+
+    .video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .hero-overlay {
+      position: relative;
+      z-index: 2;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 700px;
+    }
+
+    .hero-overlay h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 3.5rem;
-      color: #5a4b3c;
+      font-size: 3rem;
       margin-bottom: 1rem;
+      color: #fff4ea;
     }
-    .hero-title p {
+
+    .hero-overlay p {
       font-size: 1.2rem;
-      color: #7a6a58;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
+      color: #f0e6dd;
     }
-    .hero-content {
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: center;
-      gap: 2rem;
-    }
-    @media(min-width: 768px) {
-      .hero-content {
-        flex-direction: row;
-        justify-content: center;
-      }
-    }
-    .hero-text {
-      max-width: 400px;
-    }
-    .hero-text p {
-      margin-bottom: 1.5rem;
-    }
+
     .cta-button {
       display: inline-block;
       background-color: #b1a896;
@@ -78,107 +68,61 @@
       text-decoration: none;
       transition: background-color 0.3s ease;
     }
+
     .cta-button:hover {
       background-color: #998c78;
     }
-    .hero-video {
-      max-width: 375px;
-    }
-    .hero-video iframe {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 11 / 16;
-      border: none;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    }
-    nav {
-      background-color: #eae2d6;
+
+    .floating-images {
+      position: absolute;
+      top: 10%;
+      right: 5%;
+      z-index: 1;
       display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem 0;
-    }
-    nav a {
-      text-decoration: none;
-      color: #5a4b3c;
-      font-weight: bold;
-    }
-    section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    section h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #4e3c2d;
-    }
-    .gallery {
-    column-count: 4;
-    column-gap: 0.5rem;
-    padding: 0;
-  }
-  .gallery img {
-    width: 100%;
-    margin-bottom: 0.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    break-inside: avoid;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-  }
-  .gallery img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  }
-    .socials {
-    text-align: center;
-    margin-top: 1.5rem;
-  }
-  .socials a {
-    margin: 0 0.5rem;
-  }
-  .socials .icon {
-    width: 32px;
-    height: 32px;
-    fill: #5a4b3c;
-    transition: transform 0.2s ease;
-  }
-  .socials .icon:hover {
-    transform: scale(1.2);
-  }
-    footer {
-      background-color: #d9cfc2;
-      padding: 2rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #5a4b3c;
-    }
-    .lang-toggle button.active {
-      background-color: #b1a896;
-      color: white;
-      border-color: #6d6458;
+      flex-direction: column;
+      gap: 1rem;
     }
 
-#sticky-nav {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    background: #f6f1e9;
-    padding: 1rem;
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    z-index: 999;
-    border-bottom: 1px solid #ccc;
-  }
-  #sticky-nav a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #5a4b3c;
-  }
+    .floating-images img {
+      width: 120px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .floating-images img:nth-child(2) {
+      animation-delay: 2s;
+    }
+
+    .floating-images img:nth-child(3) {
+      animation-delay: 4s;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    @media(max-width: 768px) {
+      .floating-images {
+        display: none;
+      }
+      .hero-overlay {
+        background: rgba(0, 0, 0, 0.5);
+        padding: 1rem;
+        max-width: 90%;
+      }
+      .hero-overlay h1 {
+        font-size: 2rem;
+      }
+      .hero-overlay p {
+        font-size: 1rem;
+      }
+    }
   </style>
   <script>
     function switchLang(lang) {
