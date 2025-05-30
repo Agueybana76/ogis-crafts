@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rólam – Ogi's Crafts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Lora&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="lang-toggle">
+    <button onclick="switchLang('hu')" data-lang="hu" class="active">🇭🇺</button>
+    <button onclick="switchLang('en')" data-lang="en">🇬🇧</button>
+  </div>
+
+  <section class="hero-video-frame">
+    <video autoplay muted loop playsinline>
+      <source src="assets/video/OgisCraft-vide-me1.mp4" type="video/mp4">
+      A böngésződ nem játsza le a videót.
+    </video>
+    <div class="hero-text">
+      <h1>Rólam</h1>
+      <p>A könyvek, ahogy az élet is, a részletekben mesélnek.</p>
+      <a href="workshopok.html" class="cta-button">
+        <span class="cta-icon">📖</span> Nézd meg a workshopokat
+      </a>
+    </div>
+  </section>
+
+  <section class="about-block">
+    <div class="about-image">
+      <img src="images/Könyv1.avif" alt="Könyvkötés 1">
+    </div>
+    <div class="about-text">
+      <p>Egész életemben vonzott az alkotás, de nagyjából hét éve kezdtem el tudatosan időt és teret adni a kreatív munkának. Azóta számos technikát kipróbáltam, készíttettem egyedi tárgyakat, átalakítottam régi bútorokat, kísérleteztem mindenféle anyaggal és ötlettel – mindig is az hajtott, hogy valami különlegeset hozzak létre a két kezemmel.</p>
+    </div>
+  </section>
+
+  <section class="about-highlight">
+    <img src="images/Könyv2.avif" alt="Story könyv">
+    <div class="highlight-text">"Story"</div>
+  </section>
+
+  <section class="about-block reverse">
+    <div class="about-image">
+      <img src="images/Könyv3.avif" alt="Könyvkötés 2">
+    </div>
+    <div class="about-text">
+      <p>Három éve teljesen véletlenül találkoztam a könyvkötészettel, és szinte azonnal tudtam: megtaláltam azt, amit igazán kerestem. A könyvkötés számomra nem csupán technika vagy eszköz, hanem egy csendes, mégis mély kifejezőforma. Imádom, hogy minden könyv más, hogy nincs két egyforma darab – és hogy minden egyes munkafolyamatban benne van az idő, az odafigyelés, és valami megfoghatatlan, ami kézről kézre száll.</p>
+      <p>Ma már főként ezzel foglalkozom, ez lett a hivatásommá érő szenvedély. Hiszem, hogy a kézzel készült tárgyakban ott él a figyelem, a történet és az emberi jelenlét.</p>
+    </div>
+  </section>
+
+  <section class="about-cta">
+    <h2>Készítsd el a saját könyved!</h2>
+    <a href="mailto:ogiscrafts@gmail.com" class="cta-button">
+      <span class="cta-icon">🖋️</span> Jelentkezem workshopra
+    </a>
+  </section>
+
+  <section class="workshop-section">
+    <div class="workshop-intro">
+      <h2>Kézzel készített napló workshop</h2>
+      <p>Készítsd el saját naplódat egy nap alatt – kézzel, nyugalomban, természetközelben.</p>
+      <p>Egy workshop, ahol a múlt kézműves világa újra él – és veled kezdődik.</p>
+    </div>
+
+    <div class="workshop-details">
+      <div class="workshop-image">
+        <img src="images/workshop-placeholder.jpg" alt="Workshop hangulatkép">
+      </div>
+      <div class="workshop-text">
+        <h3>Mi vár rád?</h3>
+        <ul>
+          <li>Egy kézzel készített napló, amit te magad készítesz</li>
+          <li>A5 méret, keménytáblás, 120 oldalas fűzött könyv</li>
+          <li>Alapanyagok, eszközök és egy finom kávé</li>
+          <li>Nyugodt környezet, alkotó közösség</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="workshop-info">
+      <h4>Workshop időpontok – 2024 nyara:</h4>
+      <p>Június 28. • Július 5. • Július 26. • Augusztus 9. • Augusztus 23.<br>
+      10:00–16:00 – senki nem megy el kész könyv nélkül!</p>
+      <p><strong>Helyszín:</strong> Óbarok, Fejér megye (Budapesttől ~1 óra)</p>
+      <p><strong>Részvételi díj:</strong> 22 000 Ft<br>
+      <em>Előjelentkezőknek 1000 Ft kedvezmény</em></p>
+    </div>
+
+    <div class="workshop-cta">
+      <a href="mailto:ogiscrafts@gmail.com" class="cta-button">
+        <span class="cta-icon">📩</span> Jelentkezem most
+      </a>
+    </div>
+  </section>
+
+  <footer class="custom-footer">
+    <p>© 2025 Ogi's Crafts. Minden jog fenntartva.</p>
+  </footer>
+
+  <script>
+    function switchLang(lang) {
+      const root = document.documentElement;
+      const btns = document.querySelectorAll('.lang-toggle button');
+      btns.forEach(btn => btn.classList.remove('active'));
+      document.querySelector(`.lang-toggle button[data-lang="${lang}"]`).classList.add('active');
+      root.lang = lang;
+    }
+    window.onload = () => switchLang('hu');
+  </script>
+</body>
+</html>
