@@ -7,28 +7,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Lora&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
-    .hero-video-frame video {
+    .hero-video-frame {
+      position: relative;
       width: 100%;
-      max-height: 90vh;
-      object-fit: cover;
+      overflow: hidden;
       border-radius: 12px;
     }
 
-    .hero.about-hero {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      padding: 3rem 1rem;
-      background-color: #eae4da;
-      color: #3e3e3e;
+    .hero-video-frame video {
+      width: 100%;
+      height: auto;
+      max-height: 80vh;
+      object-fit: cover;
     }
 
-    .hero.about-hero .hero-text {
-      max-width: 500px;
-      padding: 1rem 2rem;
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
       text-align: center;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 12px;
+      z-index: 2;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
 
     .about-block {
@@ -47,7 +55,7 @@
     }
 
     .about-image img {
-      max-width: 450px;
+      max-width: 400px;
       width: 100%;
       border-radius: 12px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -55,51 +63,69 @@
 
     .about-highlight {
       position: relative;
-      margin: 3rem 0;
+      margin: 3rem auto;
+      max-width: 1000px;
     }
 
     .about-highlight img {
       width: 100%;
-      height: auto;
-      object-fit: cover;
-      max-height: 500px;
-      display: block;
+      border-radius: 12px;
     }
 
     .highlight-text {
       position: absolute;
       bottom: 10%;
       left: 5%;
-      background: rgba(255, 255, 255, 0.7);
-      padding: 0.75rem 1.5rem;
-      font-size: 1.5rem;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 0.5rem 1rem;
+      font-size: 1.4rem;
       font-weight: bold;
       font-family: 'Cormorant Garamond', serif;
-      border-radius: 8px;
+      border-radius: 6px;
     }
 
     .about-cta {
       text-align: center;
       padding: 3rem 1rem;
       background-color: #f4eee7;
-      border: 2px dashed #cbbfae;
+      border-top: 2px dashed #cbbfae;
     }
 
     .about-cta h2::before {
-      content: "📖 ";
+      content: "🖐️ ";
+    }
+
+    .cta-button {
+      background-color: #b1a896;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid #998c78;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .cta-button:hover {
+      background-color: #998c78;
     }
 
     @media (max-width: 768px) {
-      .hero.about-hero {
-        flex-direction: column;
+      .hero-text {
+        position: static;
+        transform: none;
+        background: rgba(0, 0, 0, 0.5);
+        margin-top: -2rem;
       }
+
       .about-block {
         flex-direction: column;
         text-align: center;
       }
+
       .highlight-text {
-        font-size: 1.2rem;
-        padding: 0.5rem 1rem;
+        font-size: 1rem;
         bottom: 5%;
       }
     }
@@ -111,13 +137,11 @@
     <button onclick="switchLang('en')" data-lang="en">🇬🇧</button>
   </div>
 
-  <section class="hero about-hero">
-    <div class="hero-video-frame">
-      <video autoplay muted loop playsinline>
-        <source src="assets/video/OgisCraft-vide-me1.mp4" type="video/mp4">
-        A böngésződ nem játsza le a videót.
-      </video>
-    </div>
+  <section class="hero-video-frame">
+    <video autoplay muted loop playsinline>
+      <source src="assets/video/OgisCraft-vide-me1.mp4" type="video/mp4">
+      A böngésződ nem játsza le a videót.
+    </video>
     <div class="hero-text">
       <h1>Rólam</h1>
       <p>A könyvek, ahogy az élet is, a részletekben mesélnek.</p>
