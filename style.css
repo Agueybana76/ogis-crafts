@@ -290,4 +290,27 @@ nav a:hover {
     right: 1rem;
     bottom: 0.5rem;
   }
+  .lang-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.lang-toggle button {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid white;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.lang-toggle button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
 }
