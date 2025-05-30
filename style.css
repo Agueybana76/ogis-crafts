@@ -313,4 +313,23 @@ nav a:hover {
 .lang-toggle button:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
+  [data-animate] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+[data-animate="fade-left"] {
+  transform: translateX(40px);
+}
+
+[data-animate="fade-right"] {
+  transform: translateX(-40px);
+}
+
+.animate {
+  opacity: 1 !important;
+  transform: translateX(0) translateY(0) !important;
+}
+
 }
