@@ -3,21 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="language" content="hu" />
   <title>Ogi's Crafts</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Lora&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="lang-toggle">
-    <button onclick="switchLang('hu')" data-lang="hu" class="active">HU</button>
-    <button onclick="switchLang('en')" data-lang="en">GB</button>
-  </div>
 
   <section class="hero-video-frame">
     <video autoplay muted loop playsinline>
       <source src="assets/video/OgisCraft-vide-me.mp4" type="video/mp4" />
       A böngésződ nem támogatja a videó hátteret.
     </video>
+
+    <div class="lang-toggle">
+      <button onclick="switchLang('hu')" data-lang="hu" class="active" aria-label="Magyar">HU</button>
+      <button onclick="switchLang('en')" data-lang="en" aria-label="Angol">GB</button>
+    </div>
+
     <div class="hero-text">
       <h1>Ogi’s Crafts</h1>
       <p>Egyedi könyvkötészet – a múlt varázsa modern kezekben</p>
@@ -38,21 +41,21 @@
 
   <nav>
     <a href="#rolam">Rólam</a>
-    <a href="#workshop">Workshop</a>
+    <a href="workshop.html">Workshop</a>
     <a href="#kapcsolat">Kapcsolat</a>
   </nav>
 
-  <section class="about-block">
-  <div class="about-image" data-animate="fade-right">
-    <img src="images/ogi-portrait.jpg" alt="Ogi portré">
-  </div>
-  <div class="about-text" data-animate="fade-left">
-    <h2>Rólam röviden</h2>
-    <p>Hét éve kezdtem tudatosan időt adni a kreativitásnak. A könyvkötészet azóta nemcsak szakmám, hanem szenvedélyem is lett – a csendes, lassú alkotás öröme inspirál minden egyes naplóban, amit készítek.</p>
-    <a href="#rolam" class="cta-button">Ismerj meg jobban</a>
-  </div>
-</section>
-  
+  <section id="rolam" class="about-block">
+    <div class="about-image" data-animate="fade-right">
+      <img src="images/ogi-portrait.jpg" alt="Ogi portré">
+    </div>
+    <div class="about-text" data-animate="fade-left">
+      <h2>Rólam röviden</h2>
+      <p>Hét éve kezdtem tudatosan időt adni a kreativitásnak. A könyvkötészet azóta nemcsak szakmám, hanem szenvedélyem is lett – a csendes, lassú alkotás öröme inspirál minden egyes naplóban, amit készítek.</p>
+      <a href="#rolam" class="cta-button">Ismerj meg jobban</a>
+    </div>
+  </section>
+
   <script>
     function switchLang(lang) {
       const root = document.documentElement;
@@ -61,22 +64,24 @@
       document.querySelector(`.lang-toggle button[data-lang="${lang}"]`).classList.add('active');
       root.lang = lang;
     }
-    window.onload = () => switchLang('hu');
+
+    window.onload = () => {
+      switchLang('hu');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      document.querySelectorAll('[data-animate]').forEach(el => {
+        observer.observe(el);
+      });
+    };
   </script>
 
-  <script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
-
-  document.querySelectorAll('[data-animate]').forEach(el => {
-    observer.observe(el);
-  });
-</script>
 </body>
 </html>
