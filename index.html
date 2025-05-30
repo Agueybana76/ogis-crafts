@@ -57,47 +57,47 @@
   </section>
 
   <section class="work-gallery" aria-label="Munkáimból">
-  <h2 data-animate="fade-up">Egy pillantás a munkáimból</h2>
-  <div class="work-gallery-grid">
-    <img src="images/munkak1.avif" alt="Kézzel kötött napló" data-animate="fade-up" />
-    <img src="images/munkak2.avif" alt="Könyvkötési részlet" data-animate="fade-up" />
-    <img src="images/munkak3.avif" alt="Egyedi borító" data-animate="fade-up" />
-  </div>
-</section>
+    <h2 data-animate="fade-up">Egy pillantás a munkáimból</h2>
+    <div class="work-gallery-grid">
+      <img src="images/munkak1.avif" alt="Kézzel kötött napló" data-animate="fade-up" />
+      <img src="images/munkak2.avif" alt="Könyvkötési részlet" data-animate="fade-up" />
+      <img src="images/munkak3.avif" alt="Egyedi borító" data-animate="fade-up" />
+    </div>
+  </section>
 
-  
   <section class="about-cta" aria-label="Bővebb bemutatkozás">
-  <h2 data-animate="fade-up">Szeretnél még többet megtudni?</h2>
-  <p data-animate="fade-up">Tudd meg, hogyan lett a könyvkötészetből életforma, és mit jelent számomra az alkotás öröme.</p>
-  <a href="rolam.html" class="cta-button" data-animate="fade-up">Rólam bővebben</a>
-</section>
+    <h2 data-animate="fade-up">Szeretnél még többet megtudni?</h2>
+    <p data-animate="fade-up">Tudd meg, hogyan lett a könyvkötészetből életforma, és mit jelent számomra az alkotás öröme.</p>
+    <a href="rolam.html" class="cta-button" data-animate="fade-up">Rólam bővebben</a>
+  </section>
 
   <section class="story-banner" aria-label="Story hangulat">
-  <div class="story-image-wrapper">
-    <img src="images/Könyv2.avif" alt="Story hangulatkép" />
-    <div class="story-label">STORY</div>
-  </div>
-</section>
+    <div class="story-image-wrapper">
+      <img src="images/Könyv2.avif" alt="Story hangulatkép" />
+      <div class="story-label">STORY</div>
+    </div>
+  </section>
 
   <div class="section-intro">
-  <h3 class="section-label">Workshop & Tanulás</h3>
-</div>
+    <h3 class="section-label">Workshop & Tanulás</h3>
+  </div>
 
   <section class="about-cta" aria-label="Kapcsolat CTA">
-  <h2>Kíváncsi vagy a részletekre?</h2>
-  <a href="workshop.html" class="cta-button">
-    Nézd meg a workshopot
-    <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-      <path d="M10.146 4.146a.5.5 0 0 1 .708 0L14 7.293l-3.146 3.147a.5.5 0 0 1-.708-.708L12.293 8H2.5a.5.5 0 0 1 0-1h9.793L10.146 4.854a.5.5 0 0 1 0-.708z"/>
-    </svg>
-  </a>
-</section>
+    <div class="cta-wrapper">
+      <h2>Kíváncsi vagy a részletekre?</h2>
+      <a href="workshop.html" class="cta-button">
+        Nézd meg a workshopot
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M10.146 4.146a.5.5 0 0 1 .708 0L14 7.293l-3.146 3.147a.5.5 0 0 1-.708-.708L12.293 8H2.5a.5.5 0 0 1 0-1h9.793L10.146 4.854a.5.5 0 0 1 0-.708z"/>
+        </svg>
+      </a>
+    </div>
+  </section>
 
-<footer class="custom-footer" id="kapcsolat">
-  <p>© 2025 Ogi's Crafts – Minden jog fenntartva</p>
-</footer>
+  <footer class="custom-footer" id="kapcsolat">
+    <p>© 2025 Ogi's Crafts – Minden jog fenntartva</p>
+  </footer>
 
-  
   <script>
     function switchLang(lang) {
       const root = document.documentElement;
@@ -111,13 +111,13 @@
       switchLang('hu');
 
       const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.intersectionRatio > 0.2) {
-      entry.target.classList.add('animate');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.6 });
+        entries.forEach(entry => {
+          if (entry.intersectionRatio > 0.2) {
+            entry.target.classList.add('animate');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.6 });
 
       document.querySelectorAll('[data-animate]').forEach(el => {
         observer.observe(el);
