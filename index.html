@@ -41,6 +41,17 @@
     <a href="#workshop">Workshop</a>
     <a href="#kapcsolat">Kapcsolat</a>
   </nav>
+
+  <section class="about-block">
+  <div class="about-image" data-animate="fade-right">
+    <img src="images/ogi-portrait.jpg" alt="Ogi portré">
+  </div>
+  <div class="about-text" data-animate="fade-left">
+    <h2>Rólam röviden</h2>
+    <p>Hét éve kezdtem tudatosan időt adni a kreativitásnak. A könyvkötészet azóta nemcsak szakmám, hanem szenvedélyem is lett – a csendes, lassú alkotás öröme inspirál minden egyes naplóban, amit készítek.</p>
+    <a href="#rolam" class="cta-button">Ismerj meg jobban</a>
+  </div>
+</section>
   
   <script>
     function switchLang(lang) {
@@ -53,4 +64,19 @@
     window.onload = () => switchLang('hu');
   </script>
 </body>
+  <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('[data-animate]').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
 </html>
