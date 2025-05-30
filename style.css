@@ -211,17 +211,17 @@ nav a:hover {
 }
 
 /*
- * Story kiemelés kép overlay felirattal
+ * Story kiemelt blokk – vizuális márkaerősítés
  */
 .about-highlight {
   position: relative;
   text-align: center;
   margin: 3rem auto;
+  max-width: 700px;
 }
 
 .about-highlight img {
   width: 100%;
-  max-width: 600px;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 }
@@ -233,9 +233,24 @@ nav a:hover {
   font-size: 1.5rem;
   color: white;
   background-color: rgba(0,0,0,0.6);
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 6px;
   font-weight: bold;
+  letter-spacing: 2px;
+  font-family: 'Cormorant Garamond', serif;
+  animation: fadeIn 1.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*
