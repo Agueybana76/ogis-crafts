@@ -268,6 +268,45 @@ nav a:hover {
 }
 
 /*
+ * STORY blokk – hangulati vizuál, teljes szélesség, alsó rész megjelenítése
+ */
+.story-banner {
+  width: 100%;
+  overflow: hidden;
+  margin: 4rem 0;
+}
+
+.story-image-wrapper {
+  position: relative;
+  height: 50vh;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.story-image-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center bottom;
+  transform: translateY(-30%);
+}
+
+.story-label {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Cormorant Garamond', serif;
+  color: #6d5f50; /* földszín */
+  background-color: rgba(245, 240, 230, 0.85);
+  padding: 0.4rem 1.2rem;
+  border-radius: 8px;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/*
  * Workshop szekció
  */
 .workshop-section {
