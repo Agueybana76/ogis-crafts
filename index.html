@@ -5,135 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ogi's Crafts</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Lora&display=swap" rel="stylesheet">
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: 'Lora', serif;
-      background-color: #f6f1e9;
-      color: #3e3e3e;
-    }
-
-    .hero {
-      position: relative;
-      height: 100vh;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-    }
-
-    .video-background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 0;
-    }
-
-    .hero-overlay {
-      position: relative;
-      z-index: 2;
-      background: rgba(0, 0, 0, 0.4);
-      padding: 2rem;
-      border-radius: 12px;
-      max-width: 700px;
-    }
-
-    .hero-overlay h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: #fff4ea;
-    }
-
-    .hero-overlay p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      color: #f0e6dd;
-    }
-
-    .cta-button {
-      display: inline-block;
-      background-color: #b1a896;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      font-weight: bold;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: #998c78;
-    }
-
-    .floating-images {
-      position: absolute;
-      top: 10%;
-      right: 5%;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .floating-images img {
-      width: 120px;
-      border-radius: 8px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-      animation: float 6s ease-in-out infinite;
-    }
-
-    .floating-images img:nth-child(2) {
-      animation-delay: 2s;
-    }
-
-    .floating-images img:nth-child(3) {
-      animation-delay: 4s;
-    }
-
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-20px);
-      }
-    }
-
-    @media(max-width: 768px) {
-      .floating-images {
-        display: none;
-      }
-      .hero-overlay {
-        background: rgba(0, 0, 0, 0.5);
-        padding: 1rem;
-        max-width: 90%;
-      }
-      .hero-overlay h1 {
-        font-size: 2rem;
-      }
-      .hero-overlay p {
-        font-size: 1rem;
-      }
-    }
-  </style>
-  <script>
-    function switchLang(lang) {
-      const root = document.documentElement;
-      const btns = document.querySelectorAll('.lang-toggle button');
-      btns.forEach(btn => btn.classList.remove('active'));
-      document.querySelector(`.lang-toggle button[data-lang="${lang}"]`).classList.add('active');
-      root.lang = lang;
-    }
-    window.onload = () => switchLang('hu');
-  </script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="lang-toggle">
@@ -141,8 +13,7 @@
     <button onclick="switchLang('en')" data-lang="en">🇬🇧</button>
   </div>
 
-  <header>
-    <section class="hero">
+  <section class="hero">
     <video class="video-background" autoplay loop muted playsinline>
       <source src="assets/video/OgisCraft-vide-me.mp4" type="video/mp4">
       A böngésződ nem támogatja a videólejátszást.
@@ -155,108 +26,21 @@
     </div>
 
     <div class="floating-images">
-      <img src="/mnt/data/Ogi-craft-3.avif" alt="Műhelymunka 1">
-      <img src="/mnt/data/Ogi-craft-4.avif" alt="Műhelymunka 2">
-      <img src="/mnt/data/Ogi-craft-6.avif" alt="Műhelymunka 3">
+      <img src="images/Ogi-craft-3.avif" alt="Műhelymunka 1">
+      <img src="images/Ogi-craft-4.avif" alt="Műhelymunka 2">
+      <img src="images/Ogi-craft-6.avif" alt="Műhelymunka 3">
     </div>
   </section>
-  </header>
 
-  <nav id="sticky-nav">
-  <a href="#rolam">Rólam</a>
-  <a href="#munkaim">Munkáim</a>
-  <a href="#workshopok">Workshopok</a>
-  <a href="#kapcsolat">Kapcsolat</a>
-</nav>
-
-  <section id="rolam">
-  <h2>Rólam</h2>
-  <p>Egész életemben vonzott az alkotás, de nagyjából hét éve kezdtem el tudatosan időt és teret adni a kreatív munkának. Azóta számos technikát kipróbáltam, készítettem egyedi tárgyakat, átalakítottam régi bútorokat, kísérleteztem mindenféle anyaggal és ötlettel – mindig is az hajtott, hogy valami különlegeset hozzak létre a két kezemmel.</p>
-  <p>Három éve teljesen véletlenül találkoztam a könyvkötészettel, és szinte azonnal tudtam: megtaláltam azt, amit igazán kerestem. A könyvkötés számomra nem csupán technika vagy eszköz, hanem egy csendes, mégis mély kifejezőforma. Imádom, hogy minden könyv más, hogy nincs két egyforma darab – és hogy minden egyes munkafolyamatban benne van az idő, az odafigyelés, és valami megfoghatatlan, ami kézről kézre száll.</p>
-  <p>Ma már főként ezzel foglalkozom, ez lett a hivatásommá érő szenvedély. A könyveimet úgy tervezem, mintha valaki majd titkokat súgna beléjük – legyen szó naplóról, ajándékról vagy egy különleges emléktárgyról. Közben persze nem engedtem el a többi kreatív ösvényt sem, csak egy kicsit háttérbe húzódtak. Hiszem, hogy a kézzel készült tárgyakban ott él a figyelem, a történet és az emberi jelenlét.</p>
-  <p>Jelenleg egy kis, kézzel készült naplókból és workshopokból álló vállalkozás építésén dolgozom. Szeretnék olyan teret teremteni, ahol mások is felfedezhetik az alkotás örömét, és ahol a csendes, lassú munka értéke újra láthatóvá válik. A könyvekben, ahogy az életben is, számomra a részletekben van a varázs.</p>
-</section>
-
-  <section id="munkaim">
-  <h2>Handmade</h2>
-  <div class="gallery">
-    <img src="images/Ogi-craft-2.avif" alt="Kézzel készített könyv">
-    <img src="images/Ogi-craft-3.avif" alt="Sketchbook">
-    <img src="images/Ogi-craft-4.avif" alt="Napló">
-    <img src="images/Ogi-craft-5.avif" alt="Kézműves termék">
-    <img src="images/Ogi-craft-6.avif" alt="Workshop emlék">
-    <img src="images/Ogi-craft-7.avif" alt="Papír tárgy">
-    <img src="images/Ogi-craft-9.avif" alt="Ajándék ötlet">
-    <img src="images/Ogi-craft-10.avif" alt="Termék részlet">
-    <img src="images/Ogi-craft-11.avif" alt="Alkotás részlet">
-  </div>
-</section>
-
-  <section id="workshopok">
-  <h2>Workshopok</h2>
-  <p><strong>Egy nap, egy könyv, egy élmény – kézzel kötött napló Óbarkon</strong></p>
-  <p>Képzeld el, hogy egy nap alatt megkötsz egy saját könyvet. Egy olyan világban, ahol minden digitális, te egy kézzel fogható gyönyörűséget hozol létre.</p>
-  <p>Vidéki könyvkötő workshop Óbarokon – egy hangulatos délután, kreatív énidő, ahol lelassulunk, alkotunk, eszünk, iszunk, és együtt megtanuljuk a kézzel kötött napló készítését. A végeredmény? Egy gyönyörű könyv – a te kezed munkája.</p>
-  <ul>
-    <li>egy kézzel készített napló, amit te magad készítesz el</li>
-    <li>A5 méretben, keménytáblás egész vásznas, 120 oldalas fűzött könyv</li>
-    <li>az összes alapanyagot és eszközt</li>
-    <li>a tudásomat</li>
-    <li>élményt, hogy akár otthon is folytathasd</li>
-    <li>egy csésze finom kávét, üdítőt, házi sütit és vidám hangulatot</li>
-    <li>egy pici meglepetést</li>
-    <li>vásárlási lehetőséget</li>
-    <li>engem, hogy megismerj</li>
-  </ul>
-  <p><strong>Neked való ez, ha:</strong></p>
-  <ul>
-    <li>vágysz egy kis nyugalomra, alkotásra</li>
-    <li>kipróbálnál valami új, kézzelfogható dolgot</li>
-    <li>inspirál a könyvek, a papírok, a régi idők világa</li>
-    <li>szeretnél kiszakadni a mindennapokból és valamit örökre megőrizni</li>
-  </ul>
-  <p><strong>Időpontok – nyári workshopnapok:</strong><br>
-  június 28. • július 5. • július 26. • augusztus 9. • augusztus 23.<br>
-  (10:00–16:00, senki nem megy el kész könyv nélkül)</p>
-  <p><strong>Helyszín:</strong> Óbarok, Fejér megye (Bicskétől 10 perc, Budapesttől kb. 1 óra)</p>
-  <p><strong>Részvételi díj:</strong> 22 000 Ft (bevezető ár!)<br>
-  <em>Koránkelő kedvezmény:</em> Ha legalább 3 héttel előre jelentkezel, 1000 Ft kedvezmény</p>
-  <p><strong>Jelentkezés:</strong> Privát üzenet vagy email: <a href="mailto:ogiscrafts@gmail.com">ogiscrafts@gmail.com</a></p>
-  <p><em>Néha csak ennyi kell: két kéz, egy kis papír, fonal és csend… és egy könyv, amit te készítettél. Gyere, csináljuk meg együtt.</em></p>
-  <p><a href="mailto:ogiscrafts@gmail.com" style="display: inline-block; margin-top: 1rem; background-color: #b1a896; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: bold;">Jelentkezem</a></p>
-</section>
-
-  <section id="kapcsolat">
-  <h2>Kapcsolat</h2>
-  <p>Érdeklődni az alábbi platformokon lehet...</p>
-  <div class="socials">
-    <a href="https://www.instagram.com/ogiscrafts" aria-label="Instagram">
-      <svg class="icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.5.2.9.4 1.3.8.4.4.6.8.8 1.3.2.4.3 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.5-.4.9-.8 1.3-.4.4-.8.6-1.3.8-.4.2-1 .3-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.5-.2-.9-.4-1.3-.8-.4-.4-.6-.8-.8-1.3-.2-.4-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.5.4-.9.8-1.3.4-.4.8-.6 1.3-.8.4-.2 1-.3 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 2.2A6.2 6.2 0 0 0 5.8 12 6.2 6.2 0 0 0 12 18.2 6.2 6.2 0 0 0 18.2 12 6.2 6.2 0 0 0 12 4.4zm0 10.2A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.4-11.8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
-      </svg>
-    </a>
-    <a href="https://www.tiktok.com/@ogiscrafts" aria-label="TikTok">
-      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor">
-        <path d="M224 72a72 72 0 0 1-72-72h-32v160a32 32 0 1 1-32-32 31.7 31.7 0 0 1 9.3 1.4V104a72 72 0 1 0 56 70.7V138a103.1 103.1 0 0 0 48 12Z"/>
-      </svg>
-    </a>
-    <a href="https://www.facebook.com/ogiscrafts" aria-label="Facebook">
-      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M22 12a10 10 0 1 0-11.6 9.9v-7H8v-3h2.4V9.5c0-2.4 1.4-3.7 3.5-3.7 1 0 2 .2 2 .2v2.2h-1.1c-1.1 0-1.4.7-1.4 1.4V12H18l-.5 3h-2.7v7A10 10 0 0 0 22 12Z" />
-      </svg>
-    </a>
-    <a href="https://uk.pinterest.com/ogiscrafts/" aria-label="Pinterest">
-      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2a10 10 0 0 0-4 19.2 9.3 9.3 0 0 1 0-3l1.5-6a4.1 4.1 0 0 1-.4-1.7c0-2 1.2-3.4 3-3.4 2 0 3 1.4 3 3.3 0 2.2-1.1 4.7-2.6 4.7-.8 0-1.4-.7-1.2-1.5l.6-2.4c.2-.7.3-1.4.2-2-.1-.7-.5-1.2-1.2-1.2-1 0-1.7 1-1.7 2.2 0 .8.3 1.3.3 1.3s-1 4.2-1.2 5a8.7 8.7 0 0 0 3.4 0 10 10 0 1 0-1.7-19.8Z"/>
-      </svg>
-    </a>
-  </div>
-</section>
-
-  <footer>
-    © 2025 Ogi's Crafts. Minden jog fenntartva.
-  </footer>
+  <script>
+    function switchLang(lang) {
+      const root = document.documentElement;
+      const btns = document.querySelectorAll('.lang-toggle button');
+      btns.forEach(btn => btn.classList.remove('active'));
+      document.querySelector(`.lang-toggle button[data-lang="${lang}"]`).classList.add('active');
+      root.lang = lang;
+    }
+    window.onload = () => switchLang('hu');
+  </script>
 </body>
 </html>
-
-
