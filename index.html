@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ogi's Crafts</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Lora&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Lora&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="lang-toggle">
-    <button onclick="switchLang('hu')" data-lang="hu" class="active">🇭🇺</button>
-    <button onclick="switchLang('en')" data-lang="en">🇬🇧</button>
+    <button onclick="switchLang('hu')" data-lang="hu" class="active">HU</button>
+    <button onclick="switchLang('en')" data-lang="en">GB</button>
   </div>
 
   <section class="hero-video-frame">
-  <video autoplay muted loop playsinline>
-    <source src="assets/video/OgisCraft-vide-me1.mp4" type="video/mp4" />
-    A böngésződ nem támogatja a videó hátteret.
-  </video>
-  <div class="hero-text">
-    <h1>Ogi’s Crafts</h1>
-    <p>Egyedi könyvkötészet – a múlt varázsa modern kezekben</p>
-    <a href="#workshopok" class="cta-button">
-      Workshop részletek
-      <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-        <path d="M10.146 4.146a.5.5 0 0 1 .708 0L14 7.293l-3.146 3.147a.5.5 0 0 1-.708-.708L12.293 8H2.5a.5.5 0 0 1 0-1h9.793L10.146 4.854a.5.5 0 0 1 0-.708z"/>
-      </svg>
-    </a>
-  </div>
+    <video autoplay muted loop playsinline>
+      <source src="assets/video/OgisCraft-vide-me.mp4" type="video/mp4" />
+      A böngésződ nem támogatja a videó hátteret.
+    </video>
+    <div class="hero-text">
+      <h1>Ogi’s Crafts</h1>
+      <p>Egyedi könyvkötészet – a múlt varázsa modern kezekben</p>
+      <a href="workshop.html" class="cta-button">
+        Workshop részletek
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M10.146 4.146a.5.5 0 0 1 .708 0L14 7.293l-3.146 3.147a.5.5 0 0 1-.708-.708L12.293 8H2.5a.5.5 0 0 1 0-1h9.793L10.146 4.854a.5.5 0 0 1 0-.708z"/>
+        </svg>
+      </a>
+    </div>
 
-  <div class="floating-images">
-    <img src="images/Könyv1.avif" alt="Kézműves könyv 1" />
-    <img src="images/Könyv2.avif" alt="Kézműves könyv 2" />
-    <img src="images/Könyv3.avif" alt="Kézműves könyv 3" />
-  </div>
-</section>
+    <div class="floating-images">
+      <img src="images/Könyv1.avif" alt="Kézműves könyv 1" />
+      <img src="images/Könyv2.avif" alt="Kézműves könyv 2" />
+      <img src="images/Könyv3.avif" alt="Kézműves könyv 3" />
+    </div>
+  </section>
 
   <script>
     function switchLang(lang) {
