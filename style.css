@@ -524,3 +524,40 @@ nav a:hover {
 .cta-box:hover {
   transform: translateY(-4px);
 }
+.section-intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.section-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(100, 85, 70, 0.5);
+  position: relative;
+  padding: 0 1rem;
+}
+
+/* Vonal (bal-jobb) */
+.section-label::before,
+.section-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(100, 85, 70, 0.2);
+  position: absolute;
+  top: 50%;
+  width: 40px;
+}
+
+.section-label::before {
+  left: -50px;
+}
+
+.section-label::after {
+  right: -50px;
+}
